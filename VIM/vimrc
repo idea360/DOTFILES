@@ -1,11 +1,12 @@
+execute pathogen#infect()
+
 syntax on
 
 filetype on
 filetype plugin on
 
 set background=dark
-":highlight Normal ctermfg=black ctermbg=darkblue
-:hi Comment ctermfg=DarkGreen ctermbg=None
+:highlight Normal ctermfg=gray ctermbg=darkblue
 
 set smartindent
 set tabstop=4
