@@ -2,16 +2,18 @@ execute pathogen#infect()
 :set t_Co=256 
 
 "colorscheme Sunburst
-"colorscheme vividchalk
-colorscheme distinguished
+colorscheme vividchalk
+"colorscheme distinguished
+"colorscheme wombat
+"colorscheme solarized
 
 syntax on 
 
 filetype on
 filetype plugin on
 
-set background=dark
-highlight Normal ctermbg=black
+"set background=dark
+"highlight Normal ctermbg=black 
 highlight PmenuSel ctermbg=darkgreen
 ":highlight Normal ctermfg=gray ctermbg=darkblue
 "highlight PmenuSel ctermfg=gray ctermbg=green
