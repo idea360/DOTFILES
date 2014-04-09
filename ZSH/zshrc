@@ -53,7 +53,7 @@ source $ZSH/oh-my-zsh.sh
 
 
 # Alias
-#alias idea360.co='ssh azureuser@idea360co.cloudapp.net -i /home/christopher/DEV/certs/azurePrivateKey.key -p 20022'
+alias idea360.co='ssh azureuser@idea360co.cloudapp.net -i /home/christopher/DEV/certs/azurePrivateKey.key -p 20022'
 alias la='ls -lah'
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
