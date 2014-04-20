@@ -2,7 +2,7 @@ execute pathogen#infect()
 
 set t_Co=256
 
-syntax on 
+syntax on
 set number
 filetype on
 filetype plugin on
