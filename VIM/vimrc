@@ -1,19 +1,14 @@
 execute pathogen#infect()
-:set t_Co=256 
 
-"colorscheme Sunburst
-colorscheme vividchalk
-"colorscheme distinguished
-"colorscheme wombat
-"colorscheme solarized
+set t_Co=256
 
 syntax on 
-
+set number
 filetype on
 filetype plugin on
 
-"set background=dark
-"highlight Normal ctermbg=black 
+set background=dark
+highlight Normal ctermbg=black
 highlight PmenuSel ctermbg=darkgreen
 ":highlight Normal ctermfg=gray ctermbg=darkblue
 "highlight PmenuSel ctermfg=gray ctermbg=green
@@ -35,18 +30,10 @@ nnoremap  :  ;
 
 nnoremap    v   <C-V>
 nnoremap <C-V>     v
-"vnoremap    v   <C-V>
-"vnoremap <C-V>     v
 nnoremap    T      gT
 nnoremap    gT     T
 nnoremap    tt      gt
 nnoremap    gt      tt
 
-augroup NoSimultaneousEdits
-    autocmd!
-    autocmd SwapExists * let v:swapchoice = 'o'
-    autocmd SwapExists * echomsg ErrorMsg
-    autocmd SwapExists * echo 'Duplicate edit session (readonly)'
-    autocmd SwapExists * echohl None
-    autocmd SwapExists * sleep 2
-augroup END
+set splitbelow
+set splitright
