@@ -56,4 +56,11 @@ source $ZSH/oh-my-zsh.sh
 alias idea360.co='ssh azureuser@idea360co.cloudapp.net -i /home/christopher/DEV/certs/azurePrivateKey.key -p 20022'
 alias la='ls -lah'
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting and shims for pyenv
+
+export PYENV_ROOT="$HOME/.pyenv"                                                                                                                 
+export PATH="$PYENV_ROOT/bin:$PATH"  
+eval "$(pyenv init -)" # for pyenv https://github.com/yyuu/pyenv
+
+#set editing mode to vi
+bindkey -v

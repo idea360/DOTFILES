@@ -28,12 +28,19 @@ Plugin 'git://git.wincent.com/command-t.git'
 "Plugin 'file:///home/gmarik/path/to/plugin'
 
 " NerdTree Plugin
-Plugin 'scrooloose/nerdtree'
+Bundle 'scrooloose/nerdtree'
 autocmd vimenter * NERDTree
+autocmd vimenter * if !argc() | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+"NerdTreeTabs
+Bundle 'jistr/vim-nerdtree-tabs'
+map <Leader>n <plug>NERDTreeTabsToggle<CR>
+let g:nerdtree_tabs_open_on_console_startup=1
 
-" Emmet
+Bundle 'ironcamel/vimchat'
 Plugin 'mattn/emmet-vim'
+
+Plugin 'vim-scripts/AutoComplPop'
 
 filetype plugin indent on     " required
 " To ignore plugin indent changes, instead use:
@@ -56,7 +63,7 @@ set number
 
 "set background=dark
 "highlight Normal ctermbg=black
-highlight PmenuSel ctermbg=darkgreen
+"highlight PmenuSel ctermbg=green
 ":highlight Normal ctermfg=gray ctermbg=darkblue
 "highlight PmenuSel ctermfg=gray ctermbg=green
 
@@ -85,3 +92,4 @@ nnoremap    gt      tt
 set splitbelow
 set splitright
 colorscheme codeschool
+highlight PmenuSel ctermbg=darkgreen
