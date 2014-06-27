@@ -23,7 +23,7 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'L9'
 Plugin 'FuzzyFinder'
 " scripts not on GitHub
-Plugin 'git://git.wincent.com/command-t.git'
+"Plugin 'git://git.wincent.com/command-t.git'
 " git repos on your local machine (i.e. when working on your own plugin)
 "Plugin 'file:///home/gmarik/path/to/plugin'
 
@@ -32,15 +32,20 @@ Bundle 'scrooloose/nerdtree'
 autocmd VimEnter * if &filetype !=# 'gitcommit' | autocmd vimenter * NERDTree | endif
 autocmd vimenter * if !argc() | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
 "NerdTreeTabs
 Bundle 'jistr/vim-nerdtree-tabs'
 map <Leader>n <plug>NERDTreeTabsToggle<CR>
 let g:nerdtree_tabs_open_on_console_startup=1
-
-Bundle 'ironcamel/vimchat'
-Plugin 'mattn/emmet-vim'
-
-Plugin 'vim-scripts/AutoComplPop'
+Bundle 'briancollins/vim-jst'
+Bundle 'moll/vim-node'
+Bundle 'sukima/xmledit'
+Bundle 'mattn/emmet-vim'
+Bundle 'vim-scripts/AutoComplPop'
+Bundle 'Raimondi/delimitMate'
+Bundle 'Lokaltog/vim-easymotion'
+Bundle 'Lokaltog/powerline'
+set rtp+=/Users/christopher/.vim/bundle/powerline/powerline/bindings/vim
 
 filetype plugin indent on     " required
 " To ignore plugin indent changes, instead use:
@@ -68,16 +73,15 @@ set number
 "highlight PmenuSel ctermfg=gray ctermbg=green
 
 set smartindent
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set expandtab
 set showtabline=2
 
 highlight ColorColumn ctermbg=green
 call matchadd('ColorColumn', '\%81v', 100)
 
-"exec "set listchars=tab:\uBB\uBB,trail:\uB7,nbsp:~"
-"set list
+
 
 nnoremap  ;  :
 nnoremap  :  ;
@@ -92,4 +96,10 @@ nnoremap    gt      tt
 set splitbelow
 set splitright
 colorscheme codeschool
+
+"exec 'set listchars=tab:\uBB\uBB,trail:\uB7,nbsp:~'
+set nolist
 highlight PmenuSel ctermbg=darkgreen
+set guifont=consolas:h13
+let mapleader=","
+map <Leader> <Plug>(easymotion-prefix)
